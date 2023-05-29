@@ -1,4 +1,5 @@
 from fastapi import FastAPI, UploadFile
+import uvicorn
 from models.ConvolutionalModel import ConvolutionalModel
 
 import sys 
@@ -66,3 +67,6 @@ def show_about():
         "torch.version.cuda": torch.version.cuda,
         'local.device': app.package['device']
     }
+
+if __name__ == '__main__':
+    uvicorn.run('main:app', host='0.0.0.0', port=8000)
