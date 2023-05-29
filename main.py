@@ -2,7 +2,6 @@ from fastapi import FastAPI, UploadFile
 from models.ConvolutionalModel import ConvolutionalModel
 
 import sys 
-import os 
 
 from PIL import Image
 import torch
